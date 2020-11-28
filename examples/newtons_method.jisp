@@ -1,0 +1,32 @@
+(define abs
+  (lambda (x)
+    (if (< x 0)
+      (- x)
+      x)))
+  
+(define average
+  (lambda (x y)
+    (/ (+ x y) 2.0)))
+  
+(define square
+  (lambda (x)
+    (* x x)))
+  
+(define good-enough?
+  (lambda (x guess)
+    (< (abs (- (square guess) x))
+       0.001)))
+  
+(define improve
+  (lambda (x guess)
+    (average guess (/ x guess))))
+  
+(define sqrt-iter
+  (lambda (x guess)
+    (if (good-enough? x guess)
+      guess
+      (sqrt-iter x (improve x guess)))))
+  
+(define sqrt
+  (lambda (x)
+    (sqrt-iter x 1)))
