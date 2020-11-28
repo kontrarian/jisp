@@ -1,6 +1,6 @@
 # JISP 
 
-A minimal Just For Fun™ Scheme interpreter in Typescript using [Deno]https://deno.land/) .
+A minimal Just For Fun™ Scheme interpreter in Typescript using [Deno](https://deno.land/) .
 
 See `jisp_test.ts` for basic usage. Run tests with `deno test --allow-read` 
 
